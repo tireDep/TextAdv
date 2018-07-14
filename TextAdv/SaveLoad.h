@@ -6,7 +6,7 @@
 void Save(int select)
 {
 	FILE *fp = fopen("save.dat", "w+b");	// + : 없으면 생성, b : 바이너리 파일 -> 읽기 불가능, 속도가 빠르고 용량이 작음 => 굳이 뭐가 저장되어있는지 확인할 필요가 없음
-	// 저장위치는 랜덤인듯
+											// 저장위치는 랜덤인듯
 
 	if (fp == NULL)
 	{
@@ -43,6 +43,6 @@ int Load()
 	else
 		printf("Load Failed\n");
 
-	fclose(fp);	
+	fclose(fp);
 	return loadSelect;
 }

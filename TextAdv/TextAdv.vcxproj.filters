@@ -18,21 +18,21 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="PrintLib.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="CSVLib.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="sString.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="sParagraph.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="sparagraphList.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Basic.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="PrintLib.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="CSVLib.h">
@@ -42,6 +42,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="sString.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="sParagraph.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="sparagraphList.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
