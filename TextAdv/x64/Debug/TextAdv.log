@@ -1,5 +1,7 @@
 ﻿  CSVLib.cpp
-  코드를 생성하고 있습니다...
-  건너뛰고 있습니다... (관련된 변경 내용 없음)
-  main.cpp
-  TextAdv.vcxproj -> F:\수업!\0714\x64\Debug\TextAdv.exe
+f:\수업!\0714\textadv\csvlib.cpp(88): error C2440: '=': 'sStringText *'에서 'sString *'(으)로 변환할 수 없습니다.
+  f:\수업!\0714\textadv\csvlib.cpp(88): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+f:\수업!\0714\textadv\csvlib.cpp(91): error C2440: '=': 'sStringBranch *'에서 'sString *'(으)로 변환할 수 없습니다.
+  f:\수업!\0714\textadv\csvlib.cpp(91): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+f:\수업!\0714\textadv\csvlib.cpp(94): error C2440: '=': 'sStringQuit *'에서 'sString *'(으)로 변환할 수 없습니다.
+  f:\수업!\0714\textadv\csvlib.cpp(94): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.

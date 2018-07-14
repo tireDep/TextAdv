@@ -148,6 +148,9 @@
     <ClCompile Include="sParagraph.cpp" />
     <ClCompile Include="sparagraphList.cpp" />
     <ClCompile Include="sString.cpp" />
+    <ClCompile Include="sStringBranch.cpp" />
+    <ClCompile Include="sStringQuit.cpp" />
+    <ClCompile Include="sStringText.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Basic.h" />
@@ -156,6 +159,9 @@
     <ClInclude Include="sParagraph.h" />
     <ClInclude Include="sparagraphList.h" />
     <ClInclude Include="sString.h" />
+    <ClInclude Include="sStringBranch.h" />
+    <ClInclude Include="sStringQuit.h" />
+    <ClInclude Include="sStringText.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

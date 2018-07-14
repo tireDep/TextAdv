@@ -2,6 +2,9 @@
 #include "sString.h"
 #include "CSVLib.h"
 
+#include "sStringText.h"
+#include "sStringBranch.h"
+#include "sStringQuit.h"
 
 int CalcParagraphCount(FILE *fp)
 {
@@ -41,10 +44,6 @@ void ParsingCSV(const char* fileName, sParagraphList* paragraphList)
 	// 2) 파싱 - 파일에 있는 내용을 읽음(데이터 구성까지 포함)
 	char buffer[1024];	// 임시 저장 버퍼
 	char* record = fgets(buffer, sizeof(buffer), fp);	// 한 줄 생성
-
-														// paragraphList->count = CalcParagraphCount(fp);	// 파일을 열자마자 문단 개수 계산
-														// paragraphList->_list = new sParagraph[paragraphList->count];
-														// 어떻게 기능을 추가할 것 인가?
 	int count = CalcParagraphCount(fp);
 	paragraphList->Create(count);
 
@@ -80,24 +79,26 @@ void ParsingCSV(const char* fileName, sParagraphList* paragraphList)
 		int selectN = atoi(token);
 
 		if (pNo != prevNo)	//	문단이 바뀜
-		{
-			// paragraphList->list[pNo]._current = NULL; // 생성자에서 해결됨
 			prevNo = pNo;
+
+		sString* newString = NULL;
+		switch (type)
+		{
+		case eStringType::TEXT:
+			newString = new sStringText();
+			break;
+		case eStringType::BRANCH:
+			newString = new sStringBranch();
+			break;
+		case eStringType::QUIT:
+			newString = new sStringQuit();
+			break;
+		default:
+			puts("typeError!!");
+			break;
 		}
-
-		// sString newString;
-		//InitString(&newString, text, type, selectY, selectN);	// 문단에 문장저장
-		//AddStringToParagraph(&paragraphList->list[pNo], &newString); // 전체문단에 문단 저장
-
-		// sString* newString = (sString*)malloc(sizeof(sString));
-		// sString* newString = new sString();	// 클래스는 new로 생성해야지 생성자가 호출되므로 malloc 사용하면 안됨!!
-		// newString->Init(text, type, selectY, selectN);	// 문단에 문장저장
-		sString* newString = new sString(text, type, selectY, selectN);	// 위에 두 줄이 한 줄로 변경됨(생성자 사용)
-																		// AddString(&paragraphList->list[pNo], newString);	// 전체문단에 문단 저장
-																		// paragraphList->_list[pNo].AddString(newString); // 역전됨
 		paragraphList->AddStringToList(pNo, newString);
 	}
-
 	// 4) 사용 완료 후 파일을 닫음 - 파일을 다시 읽을 수 없는 상태로 만듦
 	fclose(fp);
 }
