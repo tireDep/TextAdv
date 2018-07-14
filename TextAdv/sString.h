@@ -22,12 +22,13 @@ private: // 데이터 접근x
 	sString *_prev;	// 이전문장
 	sString *_next;	// 다음문장
 
-private:	// 생성자에서 사용하기 때문에 외부에서 사용x
+public:
 	void Init(const char* text, eStringType type);	// 저장공간에 문장 삽입 -> 추상적 (저장 공간, 문장, 문장 타입)
 	void Init(const char* text, eStringType type, int selectY, int selectN);	// InitString 오버로딩(분기문)
 
 public:	// 데이터를 바꾸기 위해서 함수 실행
 	void Print();	// 문장 출력
+	virtual int Process();	// 상속을 받은 자식 클래스에서는 다르게 작동됨(문단 선택 함수)
 
 	eStringType GetType()	// 가져다 쓰기만 가능함
 	{

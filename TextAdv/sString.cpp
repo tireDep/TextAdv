@@ -37,3 +37,8 @@ void sString::Print()	// 주어진 책상에 있는 학생의 이름 출력
 	printf(_text);
 	puts("");
 }
+
+int sString :: Process() 
+{
+	return -1;
+}

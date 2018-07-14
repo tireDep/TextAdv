@@ -97,6 +97,7 @@ void ParsingCSV(const char* fileName, sParagraphList* paragraphList)
 			puts("typeError!!");
 			break;
 		}
+		newString->Init(text, type, selectY, selectN);
 		paragraphList->AddStringToList(pNo, newString);
 	}
 	// 4) 사용 완료 후 파일을 닫음 - 파일을 다시 읽을 수 없는 상태로 만듦

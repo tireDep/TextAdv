@@ -1,7 +1,11 @@
-﻿  CSVLib.cpp
-f:\수업!\0714\textadv\csvlib.cpp(88): error C2440: '=': 'sStringText *'에서 'sString *'(으)로 변환할 수 없습니다.
-  f:\수업!\0714\textadv\csvlib.cpp(88): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
-f:\수업!\0714\textadv\csvlib.cpp(91): error C2440: '=': 'sStringBranch *'에서 'sString *'(으)로 변환할 수 없습니다.
-  f:\수업!\0714\textadv\csvlib.cpp(91): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
-f:\수업!\0714\textadv\csvlib.cpp(94): error C2440: '=': 'sStringQuit *'에서 'sString *'(으)로 변환할 수 없습니다.
-  f:\수업!\0714\textadv\csvlib.cpp(94): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+﻿  sParagraph.cpp
+  main.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  CSVLib.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  sStringQuit.cpp
+  sStringBranch.cpp
+  코드를 생성하고 있습니다...
+  TextAdv.vcxproj -> F:\수업!\0714\x64\Debug\TextAdv.exe

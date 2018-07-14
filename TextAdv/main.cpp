@@ -20,14 +20,12 @@ int main(void)
 
 	while (true)	// 게임의 프레임! -> 반복 시켜주는게 mainupdate
 	{
-		int nextSelect = paragraphList.Print(select);
+		int nextSelect = paragraphList.Process(select);
 
 		if (nextSelect < 0)	// 음수면 종료
 			break;
 		else
-		{
 			select = nextSelect;
-		}
 	}
 
 	Save(select);
