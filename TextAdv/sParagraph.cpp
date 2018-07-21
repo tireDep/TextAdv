@@ -10,12 +10,14 @@ sParagraph::sParagraph()
 sParagraph::~sParagraph()
 {
 	_current = _start;
+	
 	while (NULL != _current->GetNext())
 	{
 		sString* nextString = _current->GetNext();
 		delete _current;
 		_current = nextString;
 	}
+	
 }
 
 void sParagraph::AddString(sString* string) // 도움 함수(문단에 문장 삽입)	=> 스크립트를 읽은 후 문단에 문장이 몇 개 있는지 계산하는 함수
@@ -42,9 +44,15 @@ int sParagraph::Process()
 	while (NULL != _current)	// 문장의 갯수는 모르는 상태에서 반복을 진행함
 	{
 		Sleep(500);
-		// 스위치문 삭제함!
+		
 		nextSelect = _current->Process();
 		_current = _current->GetNext();
+
+		/* 키를 누르면 한 문장씩 출력 시켜주도록 개선
+		char ch = _getch();
+		if(32==ch)
+			_current = _current->GetNext();
+		*/
 	}
-	return nextSelect;	// 애매한 상황인 경우
+	return nextSelect;
 }
